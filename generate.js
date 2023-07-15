@@ -48,7 +48,7 @@ import { Tag, TagProps, TagComponenntType } from 'naxui-manager';
 
 export type IconProps <T extends TagComponenntType = "svg"> = TagProps<T>
 
-const Icon = <T extends TagComponenntType = "svg">({ children,  color, sx, ...rest }: IconProps<T>, ref: React.Ref<any>) => {
+const Icon = <T extends TagComponenntType = "svg">({ children, sx, ...rest }: IconProps<T>, ref: React.Ref<any>) => {
     const sp = {
         xmlns: "http://www.w3.org/2000/svg",
         viewBox: "0 0 24 24"
@@ -65,7 +65,7 @@ const Icon = <T extends TagComponenntType = "svg">({ children,  color, sx, ...re
         display="inline-block"
         {...rest} 
         sx={{
-            fill: color || "text.primary",
+            fill: "currentColor",
         ...(sx as any || {})
         }} 
         ref={ref}
