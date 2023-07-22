@@ -55,19 +55,20 @@ const Icon = <T extends TagComponenntType = "svg">({ children, sx, ...rest }: Ic
     }
     return (
         <Tag 
+        {...sp}
         component="svg"
         baseClass='svg-icon' 
-        {...sp}
         fontSize={24}
         userSelect="none"
         width="1em"
         height="1em"
         display="inline-block"
+        verticalAlign="middle"
         {...rest} 
         sx={{
             fill: "currentColor",
         ...(sx as any || {})
-        }} 
+        }}
         ref={ref}
         >{children}</Tag>
     )
