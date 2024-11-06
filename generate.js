@@ -44,11 +44,11 @@ export default Icon${compName}
 const start = async () => {
 
     const component = `import React from 'react';
-import { Tag, TagProps, TagComponenntType } from 'naxui-manager';
+import { Tag, TagProps, TagComponentType } from 'naxui-manager';
 
-export type IconProps <T extends TagComponenntType = "svg"> = TagProps<T>
+export type IconProps <T extends TagComponentType = "svg"> = TagProps<T>
 
-const Icon = <T extends TagComponenntType = "svg">({ children, sx, ...rest }: IconProps<T>, ref: React.Ref<any>) => {
+const Icon = <T extends TagComponentType = "svg">({ children, sx, ...rest }: IconProps<T>, ref: React.Ref<any>) => {
     const sp = {
         xmlns: "http://www.w3.org/2000/svg",
         viewBox: "0 0 24 24"

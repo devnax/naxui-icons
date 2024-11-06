@@ -6,7 +6,7 @@ import HomeIcon from './src/filled/Home'
 
 const App = () => {
   return (
-    <ThemeProvider>
+    <ThemeProvider theme="light">
       <HomeIcon color="primary" />
     </ThemeProvider>
   );
